@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+:root {
+  --color-icons: #4c5773;
+  --color-bg-icons: #e2e6e9;
+  --color-dark-shadow: #d3dae7;
+  --color-white: #fff;
+  --color-bg: #ecf0f3;
+  --box-shadow: 1rem 1rem 1rem var(--color-dark-shadow),
+    -1rem -1rem 1rem var(--color-white);
+}
+
+body {
+  background: var(--color-bg);
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-icons);
+}
+
+/* wrapper */
+
+.wrapper {
+  box-shadow: var(--box-shadow);
+  background: var(--color-bg);
+  width: 84%;
+  height: 80%;
+  border-radius: 2rem;
+  padding: 3rem;
+  transition: 0.3s ease all;
+}
+
+.wrapper:hover {
+  box-shadow: 0 0 transparent;
+}
+
+.wrapper .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper .container .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* nav-left */
+
+.wrapper .nav-left {
+  padding: 1rem 2rem;
+  background: var(--color-bg-icons);
+  border-radius: 2rem;
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+
+.wrapper .nav-left:hover {
+  background: transparent;
+}
+
+.wrapper .nav-left select {
+  background: transparent;
+  color: var(--color-icons);
+  cursor: pointer;
+}
+
+/* nav-right */
+.wrapper .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.wrapper .nav-right a {
+  width: 3.4rem;
+  height: 3.4rem;
+  background: var(--color-bg-icons);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .nav-right a:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.wrapper .nav-right a img {
+  width: 1.4rem;
+}
+
+.wrapper .nav-right a:last-child {
+  overflow: hidden;
+}
+
+.wrapper .nav-right a:last-child img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* main */
+.wrapper .main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.wrapper .main .search-bar img {
+  width: 1.8rem;
+}
+
+.wrapper .main .search-bar {
+  background: var(--color-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 2.2rem;
+  transition: 0.3 ease all;
+}
+
+.wrapper .main .search-bar:hover {
+  box-shadow: 0 0 transparent;
+}
+
+.wrapper .main .search-bar input[type="search"] {
+  width: 23rem;
+  padding: 1rem 1rem 1rem 0;
+  background: transparent;
+  color: var(--color-icons);
+  margin-left: 1.2rem;
+}
+
+.mic {
+  width: 1.3rem !important;
+}
+
+.wrapper .main .icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.wrapper .main .icons a {
+  background: var(--color-bg-icons);
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-icons);
+  font-size: 17px;
+  transition: 0.3 ease all;
+}
+
+.wrapper .main .icons a:hover {
+  box-shadow: var(--box-shadow);
+}
+
+/* footer */
+
+.wrapper .footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper .footer a {
+  color: var(--color-icons);
+  font-size: 17px;
+}
+
+.wrapper .footer .footer-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* responsive - mobile */
+@media only screen and (max-width: 768px) {
+  .wrapper .container .nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .wrapper .nav-left {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .wrapper .nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .wrapper .nav-right a {
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-bg-icons);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper .nav-right a img {
+    width: 1rem;
+  }
+
+  .wrapper .main .search-bar input[type="search"] {
+    width: 70%; /* Adjust the width as needed for iPhone 11 Pro */
+  }
+}
